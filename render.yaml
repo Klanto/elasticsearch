@@ -3,6 +3,7 @@ services:
   name: elasticsearch
   env: docker
   plan: standard
+  region: ohio
   disk:
     name: esdata
     mountPath: /usr/share/elasticsearch/data
@@ -10,7 +11,7 @@ services:
   autoDeploy: false # so ES does not restart on a push to this repository.
   envVars:
   - key: ES_JAVA_OPTS
-    value: "-Xms512m -Xmx512m"
+    value: "-Xms256m -Xmx256m"
   - key: discovery.type
     value: single-node
   - key: cluster.name
