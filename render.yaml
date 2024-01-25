@@ -2,7 +2,7 @@ services:
 - type: pserv
   name: elasticsearch
   env: docker
-  plan: standard
+  plan: starter
   region: ohio
   disk:
     name: esdata
